@@ -1,0 +1,268 @@
+/* IMPORTS */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+/* ROOTS */
+
+
+:root {
+    --shadow-color: 0deg 0% 7%;
+    --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-elevation-high:
+      0.9px 0.2px 1.1px hsl(var(--shadow-color) / 0.36),
+      6px 1.6px 7.1px -0.4px hsl(var(--shadow-color) / 0.36),
+      11.7px 3.1px 13.8px -0.8px hsl(var(--shadow-color) / 0.37),
+      20.3px 5.4px 23.9px -1.2px hsl(var(--shadow-color) / 0.37),
+      34.3px 9.2px 40.5px -1.6px hsl(var(--shadow-color) / 0.38),
+      56.1px 15px 66.2px -2px hsl(var(--shadow-color) / 0.38),
+      88.1px 23.5px 103.9px -2.4px hsl(var(--shadow-color) / 0.39);
+    --shadow-elevation-high-darker:
+    0.9px 0.2px 1px hsl(var(--shadow-color) / 0.57),
+    5.6px 1.5px 6px -0.5px hsl(var(--shadow-color) / 0.54),
+    11.6px 3.1px 12.4px -1px hsl(var(--shadow-color) / 0.51),
+    21.9px 5.8px 23.4px -1.5px hsl(var(--shadow-color) / 0.48),
+    39.4px 10.5px 42.2px -2.1px hsl(var(--shadow-color) / 0.45),
+    67.1px 17.9px 71.9px -2.6px hsl(var(--shadow-color) / 0.41),
+    107.9px 28.8px 115.6px -3.1px hsl(var(--shadow-color) / 0.38);
+  }
+
+
+/* MAIN STYLE */
+
+
+body{
+    display: grid;
+    grid-template-areas: ' 1 ',
+                         ' 2 ',
+                         ' 2 ',
+                         ' 3 ',
+                         ' 4 ';
+    margin: 0;
+    color: aliceblue;
+    overflow-x: hidden;
+}
+
+p{
+    font-family: 'Caveat', cursive;
+}
+
+
+.sec01{
+    display: grid;
+    grid-template-areas: ' imgB imgB imgB . . . '
+                         ' imgB imgB imgB he1 he1 he1 '
+                         ' imgB imgB imgB p1 p1 p1 '
+                         ' imgB imgB imgB . . . '
+                         ' imgB imgB imgB btn btn btn '
+                         ' imgB imgB imgB . . . ';
+    grid-area: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2C2C2C;
+}
+
+.sec02{
+    grid-area: 2;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2C2C2C;
+    flex-flow: row-reverse;
+}
+
+.sec03{
+    grid-area: 3;
+    height: 100vh;
+    width: 100vw;
+    background-color: #191917;
+    flex-flow: row;
+}
+
+.sec02,
+.sec03{
+    display: flex;
+}
+
+.sec04{
+    display: grid;
+    grid-template-areas: ' pic pic pic par '
+                         ' pic pic pic par '
+                         ' pic pic pic par2 '
+                         ' pic pic pic par2 ';
+    grid-area: 4;
+    height: 100vh;
+    width: 100vw;
+    background-color: #191917;
+}
+
+.bgImg{
+    background-color: aliceblue;
+    grid-area: imgB;
+    max-width: 50vw;
+    min-width: 40vw;
+    margin: auto;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.sec01 > h2{
+    grid-area: he1;
+    margin: auto 8%;
+    margin-top: 12%;
+    font-size: 2.3rem;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 3px 3px 5px rgb(33, 33, 33);
+}
+
+.sec01 > p{
+    grid-area: p1;
+}
+
+.sec01 > p,
+.sec02 > p,
+.sec03 > p,
+.p1,
+.p2{
+    margin: auto 5%;
+    padding: 5%;
+}
+
+.sec01 > button{
+    grid-area: btn;
+    background-color: #313EB7;
+    color: aliceblue;
+    margin: auto;
+    width: 70px;
+    height: 35px;
+    margin-bottom: 20%;
+    border-radius: 8px;
+    border: none;
+    box-shadow: var(--shadow-elevation-high);
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 3px 3px 7px rgb(33, 33, 33);
+}
+
+.sec02 > .secImg{
+    box-shadow: var(--shadow-elevation-high);
+}
+
+.sec03 > .secImg,
+.finalImg{
+    box-shadow: var(--shadow-elevation-high-darker);
+}
+
+.secImg,
+.finalImg{
+    min-width: 50vw;
+    max-width: 50vw;
+    margin: auto 30px;
+}
+
+.finalImg{
+    grid-area: pic;
+    background-color: #000000;
+}
+
+.p1,
+.p2{
+    align-items: center;
+    text-align: center;
+}
+
+.p1{
+    grid-area: par;
+}
+
+.p2{
+    grid-area: par2;
+}
+
+footer{
+    background-color: #191917;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid aliceblue;
+}
+
+
+/* EXTRA STYLE */
+
+
+.bgImg,
+.secImg,
+.finalImg{
+    border-radius: 5px;
+}
+
+.sec01 > button:hover{
+    transform: scale(1.03);
+    background-color: #2a369c;
+}
+
+
+/* MEDIA QUERY */
+
+
+@media only screen and (max-width: 768px){
+    body{
+        font-size: medium;
+    }
+    .sec01{
+        background-image: url("https://lun-eu.icons8.com/a/1f2aFnPZTkqzu5kc9Bn6_g/2uBRYIn8mEq4EXM1YGrVGg/Silhouette_of_a_woman_in_front_of_a_black_background.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .sec01,
+    .sec02,
+    .sec03{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .sec04{
+        display: grid;
+        grid-template-areas: ' pic pic pic pic '
+                             ' pic pic pic pic '
+                             ' par par par2 par2 '
+                             ' par par par2 par2 ';
+                             align-items: center;
+    }
+
+    .sec01 > h2{
+        margin: 20% 8% auto 8%;
+        text-shadow: 3px 3px 5px rgba(150, 150, 150, 1);
+    }
+
+    .bgImg{
+        display: none;
+    }
+
+    .finalImg{
+        margin: auto;
+    }
+
+    .secImg{
+        background-color: black;
+        min-width: 86%;
+        margin: auto;
+    }
+
+    .p1, .p2{
+        font-size: 12px;
+    }
+
+    .sec04 > .p2{
+        border-left: 1px solid aliceblue;
+    }
+
+
+}
