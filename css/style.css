@@ -50,6 +50,7 @@ body{
 
 p{
     font-family: 'Caveat', cursive;
+    text-shadow: 4px 2px 11px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -101,7 +102,6 @@ p{
 }
 
 .bgImg{
-    background-color: aliceblue;
     grid-area: imgB;
     max-width: 50vw;
     min-width: 40vw;
@@ -248,11 +248,12 @@ footer{
 
     .finalImg{
         margin: auto;
+        min-width: 70%;
     }
 
     .secImg{
         background-color: black;
-        min-width: 86%;
+        min-width: 70%;
         margin: auto;
     }
 
